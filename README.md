@@ -65,6 +65,45 @@ CUT&RUN sequencing was performed to evaluate changes in chromatin state and Poly
 6. Motif discovery using MEME Suite
 7. Pathway enrichment analysis using Reactome and MSigDB
 
+## Analysis Workflow
+
+RNA-seq
+
+Raw Reads
+↓
+STAR Alignment
+↓
+Count Matrix Generation
+↓
+DESeq2 Differential Expression
+↓
+PCA / Heatmaps / Volcano Plots
+↓
+FGSEA Pathway Enrichment
+
+CUT&RUN
+
+Raw Reads
+↓
+Bowtie2 Alignment
+↓
+MACS2 / SEACR Peak Calling
+↓
+Consensus Peak Generation
+↓
+Peak Annotation (ChIPseeker)
+↓
+Motif Analysis (MEME)
+↓
+Pathway Enrichment
+
+Integrated Analysis
+
+RNA-seq + CUT&RUN
+↓
+Identification of PCGF1-regulated pathways
+↓
+GD2 Synthesis & Glycosphingolipid Metabolism
 ---
 
 ## Tools and Software
@@ -128,6 +167,15 @@ Integrated RNA-seq and CUT&RUN analyses identified enrichment of pathways involv
 
 These pathways are closely linked to GD2 synthesis and regulation, supporting a mechanistic relationship between PCGF1 activity and GD2 expression.
 
+---
+## Key Results
+
+- Identified transcriptional changes induced by PCGF1 knockdown in LN229 glioblastoma cells.
+- Observed significant upregulation of GD2 biosynthesis genes including ST8SIA1 and B4GALNT1.
+- Characterized alterations in H2AK119ub1, H3K27me3, and H3K4me3 chromatin landscapes.
+- Generated consensus CUT&RUN peaks and annotated genomic binding regions.
+- Performed pathway enrichment analysis identifying glycosphingolipid metabolism and catabolism as significantly enriched pathways.
+- Integrated RNA-seq and epigenomic datasets to investigate mechanisms regulating GD2 expression.
 ---
 
 ## Biological Significance
